@@ -91,7 +91,8 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # removed --cov flags so a plain `pytest` run doesn't require pytest-cov installed
-addopts = "-v"
+# -p no:warnings keeps the output clean during local dev
+addopts = "-v -p no:warnings"
 
 [tool.coverage.run]
 source = ["src/markitdown"]
